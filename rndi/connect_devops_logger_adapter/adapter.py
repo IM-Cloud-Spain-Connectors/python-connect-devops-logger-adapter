@@ -4,7 +4,7 @@
 # Copyright (c) 2023 Ingram Micro. All Rights Reserved.
 #
 from copy import deepcopy
-from logging import LoggerAdapter, Logger
+from logging import Logger, LoggerAdapter
 from typing import Any, Dict, List, Tuple, Union
 
 
