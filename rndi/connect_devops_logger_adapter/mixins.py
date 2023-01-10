@@ -5,7 +5,7 @@
 #
 from logging import LoggerAdapter
 
-from rndi.connect_devops_logger.adapter import bind_logger
+from rndi.connect_devops_logger_adapter.adapter import bind_logger
 
 
 class WithBoundedLogger:

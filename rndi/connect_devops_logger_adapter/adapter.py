@@ -4,7 +4,7 @@
 # Copyright (c) 2023 Ingram Micro. All Rights Reserved.
 #
 from copy import deepcopy
-from logging import LoggerAdapter
+from logging import LoggerAdapter, Logger
 from typing import Any, Dict, List, Tuple, Union
 
 
@@ -20,7 +20,7 @@ class ExtensionLoggerAdapter(LoggerAdapter):
         return msg, kwargs
 
 
-def bind_logger(logger: LoggerAdapter, request: dict) -> LoggerAdapter:
+def bind_logger(logger: Union[LoggerAdapter, Logger], request: dict) -> LoggerAdapter:
     """
     Binds the logger to the given request by attaching the id and some
     additional information to the extra data of the logger adapter.
