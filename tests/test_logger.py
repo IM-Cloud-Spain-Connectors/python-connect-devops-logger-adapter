@@ -1,8 +1,8 @@
 from logging import LoggerAdapter
 from unittest.mock import Mock
 
-from rndi.connect_devops_logger_adapter.adapter import ExtensionLoggerAdapter, mask_dictionary
-from rndi.connect_devops_logger_adapter.mixins import WithBoundedLogger
+from rndi.connect.devops_logger_adapter.adapter import ExtensionLoggerAdapter, mask_dictionary
+from rndi.connect.devops_logger_adapter.mixins import WithBoundedLogger
 
 
 class Helper(WithBoundedLogger):

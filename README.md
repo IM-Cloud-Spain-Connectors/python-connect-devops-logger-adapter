@@ -38,7 +38,7 @@ and the request you want to bind. A new instance of LoggerAdapter will be return
 
 ```python
 import logging
-from rndi.connect_devops_logger_adapter.adapter import bind_logger
+from rndi.connect.devops_logger_adapter.adapter import bind_logger
 
 request = {
     'id': 'PR-1000-2000-3000-4000-001',
@@ -57,7 +57,7 @@ the logger from your extension.
 
 ```python
 from logging import LoggerAdapter
-from rndi.connect_devops_logger_adapter.mixins import WithBoundedLogger
+from rndi.connect.devops_logger_adapter.mixins import WithBoundedLogger
 
 
 class SomeBusinessTransaction(WithBoundedLogger):
