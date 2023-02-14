@@ -15,7 +15,7 @@ def test_bounded_logger_should_configure_logger_from_request_dictionary_asset():
     helper.bind_logger({
         'id': 'PR-123-456-789',
         'type': 'purchase',
-        'status': 'pending'
+        'status': 'pending',
     })
 
     assert helper.logger.extra.get('request_id') == 'PR-123-456-789'
@@ -26,7 +26,7 @@ def test_bounded_logger_should_configure_logger_from_request_dictionary_tier_con
     helper.bind_logger({
         'id': 'TC-123-456-789',
         'type': 'setup',
-        'status': 'pending'
+        'status': 'pending',
     })
 
     assert helper.logger.extra.get('request_id') == 'TC-123-456-789'
@@ -76,9 +76,9 @@ def test_mask_function_should_mask_the_required_values():
             'users': [
                 {'id': 1, 'password': '1'},
                 {'id': 2, 'password': '22'},
-                {'id': 3, 'password': '333'}
-            ]
-        }
+                {'id': 3, 'password': '333'},
+            ],
+        },
     }
 
     expected = {
@@ -88,9 +88,9 @@ def test_mask_function_should_mask_the_required_values():
             'users': [
                 {'id': 1, 'password': '*'},
                 {'id': 2, 'password': '**'},
-                {'id': 3, 'password': '***'}
-            ]
-        }
+                {'id': 3, 'password': '***'},
+            ],
+        },
     }
 
     assert mask_dictionary(payload, ['key', 'password']) == expected
