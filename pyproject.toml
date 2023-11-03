@@ -8,7 +8,7 @@ readme = "README.md"
 packages = [
     { include = "rndi" }
 ]
-repository = ""
+repository = "https://github.com/IM-Cloud-Spain-Connectors/python-connect-devops-logger-adapter"
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Operating System :: OS Independent",
